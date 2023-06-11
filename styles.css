@@ -1,0 +1,390 @@
+@import url('https://fonts.googleapis.com/css2?family=Khand:wght@300;400;500&display=swap');
+
+*{
+    font-family: 'Khand', sans-serif;
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    outline: none; border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: 2s linear;
+    
+}
+
+:root {
+    --carrot-color: #e67e22;
+    --black: #130f40;
+    --white: #fff;
+    --light-color: #666;
+    --light-bg: #eee;
+    --border: 1.5rem solid#130f40;
+    --box-shadow: 0 .5rem 1.5rem rgba(0,0,0.2);
+}
+
+
+html {
+    font-size: 100%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 4rem;
+
+ &::-webkit-scrollbar{
+    width: 1rem;
+ }
+
+
+ &::-webkit-scrollbar-track{
+    background: transparent;
+ }
+
+ &::-webkit-scrollbar-thumb{
+    background:#e67e22;
+    border-radius: 5rem;
+ }
+}
+
+@keyframes fadeIn {
+    0%{
+        transform: translateY(43em);
+        opacity:0;
+    }
+}
+
+.header{
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 10%;
+    box-shadow: var(--box-shadow);
+    position: fixed;
+    top: 0; left: 0;right: 0;
+    z-index: 900;
+    transform: translateY(-10rem);
+ 
+ }
+
+ .active{
+   transform:translateY(0rem);
+ }
+
+ .logo{
+    font-size: 2.5rem;
+    color: #131313;
+    font-weight: bolder;
+ }
+
+ i{
+    color:#e67e22;
+ }
+
+.navbar{
+  background: #fff;
+  display: flex;
+  align-items: center;
+
+}
+
+.navbar a{
+    position: sticky;
+    margin-right: 1rem;
+    font-size: 1.8rem;
+    color: gray;
+    
+}
+
+.navbar a:hover{
+    color:#e67e22;
+}
+.nabvar-icons{
+    position: fixed;
+}
+
+.icons div{
+    font-size: 2rem;
+    margin-left: 1.5rem;
+    color:#131313;
+    cursor: pointer;
+}
+
+.icons div:hover{
+    color:#e67e22;
+}
+
+.login-form{
+    position: absolute;
+    top:115%; right: 2rem;
+    width: 40rem;
+    border-radius: .1rem;
+    background: #fff;
+    box-shadow: var(--box-shadow);
+    padding: 2rem;
+    font-size: 1.5rem;
+    display: none;
+}
+.active{
+    display: block;
+    animation:fadeIn .4s linear;
+}
+
+section{
+    padding:5rem 9%;
+}
+.btn{
+   display: inline-block;
+   margin-top: 1rem;
+   padding: .6rem 1.5rem;
+   border-radius: 5rem;
+   border-top-left-radius: 0;
+   border: var(--border); border-width: 0.2rem;
+   cursor: pointer;
+   background: none;
+   color:#131313;
+   font-size: 1.5rem;
+   overflow: hidden;
+   z-index: 0;
+   position: relative;
+}
+
+.btn::before{
+    content:'';
+    position: absolute;
+    top:0; left:0;
+    height: 100%;
+    width: 100%;
+    background:#131313;
+    z-index: -1;
+    transition: .2s linear;
+    clip-path: circle(0% to 50% 50%);
+}
+
+.h3{
+    color:#131313;
+    font-size:1.5rem;
+    padding-bottom: .4rem;
+}
+
+.box{
+    width: 100%;
+    border-bottom: var(--border);
+    border-width: .1rem;
+    padding:1.5rem 0;
+    font-size: 1.5rem;
+    color:#131313;
+    text-transform: none;
+    margin:1rem 0;
+}
+
+.remember{
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  padding: 1rem 0;
+}
+
+label{
+    font-size: 1.5rem;
+    cursor:pointer;
+    color: gray;
+
+}
+
+.btn{
+   width: 100%;
+   max-width: 400px;
+   margin: 1.5rem 0;
+   font-size: 1.6rem
+}
+
+
+.links{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+a {
+    font-size: 1.4rem;
+    color: #e67e22;
+}
+
+a:hover{
+    color:#131313;
+    text-decoration: underline;
+}
+
+.home{
+    min-height: 100vh;
+    display:flex;
+    align-items: center;
+    justify-content: flex-end;
+    background: url(home/dannah/Downloads/petfriend/Downloads/petfriend/dogg.jpg)no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+
+  } 
+
+
+  .content h3{
+    font-size: 5.5rem;
+    color:honeydew;
+    font-weight: 400%;
+    padding-bottom: 1rem;
+    
+  }
+
+  span{
+    color:aquamarine;
+  }
+
+
+.content .btn{
+    display: inline-block;
+    border-color:#fff;
+    padding: 10px 20px;
+    color:#fff;
+    font-size: 3rem;
+    text-decoration: none;
+}
+
+:hover .btn{
+    color:#666;
+}
+
+::before{
+    background:#eee;
+}
+.home{
+    justify-content: center;
+    background-position: right;
+
+}
+.content{
+    text-align: center;
+    padding-bottom: 5rem;
+
+}
+
+.about{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+.image{
+    flex: 2 2 20rem;
+    margin-top: 300px;
+    padding-right: 1px;
+}
+img{
+    width: 100%;
+}
+.content {
+  flex: 1 1 40rem;
+  color:#666;
+
+}
+p{
+    font-size: 3rem;
+    font-weight: 600;
+    padding: 1rem 0;
+    line-height: 2;
+}
+
+.dog-food{
+   display: flex;
+   align-items: center;
+   flex-wrap: wrap;
+   gap: 2rem;
+}
+
+
+.dog-food .content{
+  text-align:right;
+  font-size: 3rem;
+  padding-left:50rem;
+  align-items: center;
+  line-height: 2
+}
+
+.dog-food img{
+    width: 75%;
+    float: right;
+ 
+}
+.section{
+    padding: 5rem 9%;
+}
+.heading{
+    padding-bottom:2rem;
+    text-align: center;
+    font-size: 3.5rem;
+}
+
+
+
+
+
+
+
+
+
+@media (max-width:991px) {
+
+    html{
+        font-size: 55%;
+    }
+}
+
+.header{
+    padding: 2rem;
+}
+section{
+    padding: 5rem 2rem;
+}
+
+
+
+@media (max-width:768px) {
+
+    
+   #menu-btn{
+    display: inline-block;
+   }
+
+
+
+    .header{
+
+    }
+    .navbar{
+        position:absolute;
+        top:99%;left:0;right:0;
+        background: #fff;
+        clip-path:polygon(0 0,100% 0,100% 0,0 0);
+    }
+
+    .active{
+        clip-path: polygon(0 0,100% 0,100% 100%,0 100%);
+    }
+    a{
+        display:block;
+        margin:2rem;
+        font-size:2rem;
+    }
+}
+
+
+@media (max-width:450px) {
+    html{
+        font-size: 60%;
+    }
+}
+
+.header .login-form{
+    width: 60%;
+}
+
+
